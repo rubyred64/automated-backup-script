@@ -1,0 +1,34 @@
+Backup Log
+==========
+
+Started At: 2026-05-11 12:29:25
+Finished At: 2026-05-11 12:29:25
+
+Source Directory:
+/home/rubyred/back-it-toolkit/code-backup
+
+Backup Folder:
+/home/rubyred/back-it-toolkit/code-backup/backups/backup_2026-05-11_122925
+
+Copied Files Folder:
+/home/rubyred/back-it-toolkit/code-backup/backups/backup_2026-05-11_122925/backup
+
+Summary
+-------
+Files Copied: 4
+Folders Created: 0
+Files Skipped: 1
+Errors: 0
+Total Size Copied: 0.01 MB
+
+Copied Files
+------------
+.gitignore
+example-output.txt
+backup.py
+README.md
+
+Skipped Files
+-------------
+Skipped backup directory: backups
+

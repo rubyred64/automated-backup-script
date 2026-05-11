@@ -1,0 +1,17 @@
+$ python3 backup.py
+
+Enter source directory to back up: /home/rubyred/back-it-toolkit/code-backup
+
+Backup completed.
+
+Source: /home/rubyred/back-it-toolkit/code-backup
+Backup Folder: /home/rubyred/back-it-toolkit/code-backup/backups/backup_2026-05-08_153000
+Copied Files: /home/rubyred/back-it-toolkit/code-backup/backups/backup_2026-05-08_153000/backup
+
+Files Copied: 4
+Folders Created: 1
+Files Skipped: 1
+Errors: 0
+Total Size Copied: 12.48 KB
+
+Log saved to: /home/rubyred/back-it-toolkit/code-backup/backups/backup_2026-05-08_153000/backup_log.txt
