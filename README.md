@@ -34,7 +34,8 @@ Project Structure
     ├── backup.py
     ├── README.md
     ├── .gitignore
-    ├── example_output.txt
+    ├── example-output.txt
+    ├── backup_log_example.txt
     └── backups/
         └── backup_YYYY-MM-DD_HHMMSS/
             ├── backup_log.txt
@@ -56,7 +57,7 @@ Enter the full path of the folder you want to back up.
 
 Example WSL path:
 
-    /home/User/Path
+    /home/rubyred/back-it-toolkit/code-backup
 
 Example Windows folder from WSL:
 
@@ -85,7 +86,10 @@ Each backup is stored like this:
     └── backup_2026-05-08_153000/
         ├── backup_log.txt
         └── backup/
-            └── Copeid files and folders
+            ├── file1.txt
+            ├── file2.py
+            └── subfolder/
+                └── nested_file.txt
 
 Error Handling
 --------------
@@ -98,14 +102,29 @@ If a file cannot be copied because of permission issues or another copy error, t
 
 Symlinks are skipped and recorded in the backup log.
 
+Generated Backups
+-----------------
+
+Generated backup folders are stored inside:
+
+    backups/
+
+The repository includes an example terminal output file:
+
+    example-output.txt
+
+The repository also includes an example backup log:
+
+    backup_log_example.txt
+
+Generated backup folders should not be committed to GitHub.
+
 Notes
 -----
 
 The program creates backups beside backup.py inside the local backups folder.
 
 The program does not ask for a backup destination. This keeps backup output predictable and prevents backups from being scattered across the system.
-
-Generated backup folders should not be committed to GitHub.
 
 Future Improvements
 -------------------
