@@ -15,7 +15,7 @@ Features
 - Preserves the original folder structure
 - Copies hidden files
 - Skips symlinked files and directories
-- Skips the program's own backups folder to prevent recursive backups
+- Prevents backing up the program's own backups folder
 - Records copied files, created folders, skipped files, errors, and total copied size
 - Stores backup_log.txt inside each timestamped backup folder
 - Uses a temporary working folder before moving the completed backup into place
@@ -98,6 +98,10 @@ If the source path does not exist, the program prints an error and exits.
 
 If the source path is not a directory, the program prints an error and exits.
 
+If the source path is inside the program's backups folder, the program prints an error and exits to prevent recursive backups.
+
+If a backups folder is found while copying another source directory, that folder is skipped and recorded in backup_log.txt.
+
 If a file cannot be copied because of permission issues or another copy error, the program records the error in backup_log.txt and continues copying the remaining files.
 
 Symlinks are skipped and recorded in the backup log.
@@ -125,6 +129,8 @@ Notes
 The program creates backups beside backup.py inside the local backups folder.
 
 The program does not ask for a backup destination. This keeps backup output predictable and prevents backups from being scattered across the system.
+
+The program uses a temporary working folder while copying. The completed backup is moved into the backups folder only after the copy process and backup log are finished.
 
 Future Improvements
 -------------------
